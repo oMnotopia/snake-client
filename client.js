@@ -10,6 +10,12 @@ const connect = function() {
   //Interpret incoming data
   conn.setEncoding('utf-8');
 
+  //Event handlers
+  conn.on("connect", () => {
+    console.log("Connection to the server has been established");
+    conn.write("Name: CEP");
+  });
+
   conn.on("data", (data) => {
     console.log(data);
   });
