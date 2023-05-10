@@ -8,7 +8,16 @@ const handleUserInput = (key) => {
   }
 
   if (key === 'w') {
-    process.stdout.write("Move");
+    connection.write("Move: up");
+  }
+  if (key === 'a') {
+    connection.write("Move: left");
+  }
+  if (key === 's') {
+    connection.write("Move: down");
+  }
+  if (key === 'd') {
+    connection.write("Move: right");
   }
 };
 
