@@ -6,7 +6,7 @@ const handleUserInput = (key) => {
     console.log("Thanks for using me, ciao!");
     process.exit();
   }
-
+  //Movement commands
   if (key === 'w') {
     connection.write("Move: up");
   }
@@ -19,6 +19,14 @@ const handleUserInput = (key) => {
   if (key === 'd') {
     connection.write("Move: right");
   }
+  //Chat commands
+  if (key === 'z') {
+    connection.write("Say: Hisss");
+  }
+  if (key === 'x') {
+    connection.write("Say: Too sssslow");
+  }
+
 };
 
 //Setup interface to handle user input from stdin
